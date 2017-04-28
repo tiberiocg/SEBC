@@ -1,0 +1,82 @@
+[ec2-user@ip-172-31-2-144 ~]$ hdfs dfs -ls /user
+Found 9 items
+drwxr-xr-x   - admin    admin               0 2017-04-28 11:30 /user/admin
+drwxr-xr-x   - ec2-user ec2-user            0 2017-04-28 11:33 /user/ec2-user
+drwxr-xr-x   - hdfs     supergroup          0 2017-04-28 11:30 /user/hdfs
+drwxrwxrwx   - mapred   hadoop              0 2017-04-28 11:25 /user/history
+drwxrwxr-t   - hive     hive                0 2017-04-28 11:26 /user/hive
+drwxrwxr-x   - hue      hue                 0 2017-04-28 11:26 /user/hue
+drwxr-xr-x   - neymar   neymar              0 2017-04-28 11:31 /user/neymar
+drwxrwxr-x   - oozie    oozie               0 2017-04-28 11:27 /user/oozie
+drwxr-xr-x   - ronaldo  ronaldo             0 2017-04-28 11:31 /user/ronaldo
+[ec2-user@ip-172-31-2-144 ~]$ curl -u "admin:admin" -i http://ip-172-31-1-15.us-west-2.compute.internal:7180/api/v14/hosts
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Set-Cookie: CLOUDERA_MANAGER_SESSIONID=1ppsz6zp39zetwdfq1ltcdzm5;Path=/;HttpOnly
+Content-Type: application/json
+Date: Fri, 28 Apr 2017 15:34:36 GMT
+Transfer-Encoding: chunked
+Server: Jetty(6.1.26.cloudera.4)
+
+{
+  "items" : [ {
+    "hostId" : "i-016a769d27acf9b8d",
+    "ipAddress" : "172.31.0.163",
+    "hostname" : "ip-172-31-0-163.us-west-2.compute.internal",
+    "rackId" : "/default",
+    "hostUrl" : "http://ip-172-31-1-15.us-west-2.compute.internal:7180/cmf/hostRedirect/i-016a769d27acf9b8d",
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED",
+    "numCores" : 4,
+    "numPhysicalCores" : 2,
+    "totalPhysMemBytes" : 15331930112
+  }, {
+    "hostId" : "44e1be5c-fe9e-41d6-a8c9-4f1277556468",
+    "ipAddress" : "172.31.1.15",
+    "hostname" : "ip-172-31-1-15.us-west-2.compute.internal",
+    "rackId" : "/default",
+    "hostUrl" : "http://ip-172-31-1-15.us-west-2.compute.internal:7180/cmf/hostRedirect/44e1be5c-fe9e-41d6-a8c9-4f1277556468",
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED",
+    "numCores" : 4,
+    "numPhysicalCores" : 2,
+    "totalPhysMemBytes" : 15331930112
+  }, {
+    "hostId" : "i-0ad4f8f5e9d930b49",
+    "ipAddress" : "172.31.2.144",
+    "hostname" : "ip-172-31-2-144.us-west-2.compute.internal",
+    "rackId" : "/default",
+    "hostUrl" : "http://ip-172-31-1-15.us-west-2.compute.internal:7180/cmf/hostRedirect/i-0ad4f8f5e9d930b49",
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED",
+    "numCores" : 4,
+    "numPhysicalCores" : 2,
+    "totalPhysMemBytes" : 15331930112
+  }, {
+    "hostId" : "i-0e045e47e2ac7cc20",
+    "ipAddress" : "172.31.3.141",
+    "hostname" : "ip-172-31-3-141.us-west-2.compute.internal",
+    "rackId" : "/default",
+    "hostUrl" : "http://ip-172-31-1-15.us-west-2.compute.internal:7180/cmf/hostRedirect/i-0e045e47e2ac7cc20",
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED",
+    "numCores" : 4,
+    "numPhysicalCores" : 2,
+    "totalPhysMemBytes" : 15331930112
+  }, {
+    "hostId" : "i-0f2d8babe7f7f8c53",
+    "ipAddress" : "172.31.9.27",
+    "hostname" : "ip-172-31-9-27.us-west-2.compute.internal",
+    "rackId" : "/default",
+    "hostUrl" : "http://ip-172-31-1-15.us-west-2.compute.internal:7180/cmf/hostRedirect/i-0f2d8babe7f7f8c53",
+    "maintenanceMode" : false,
+    "maintenanceOwners" : [ ],
+    "commissionState" : "COMMISSIONED",
+    "numCores" : 4,
+    "numPhysicalCores" : 2,
+    "totalPhysMemBytes" : 15331930112
+  } ]
