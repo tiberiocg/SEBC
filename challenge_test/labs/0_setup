@@ -89,6 +89,17 @@ Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /
 Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/product/                                                                                                          content-rhel7.crt
 Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /etc/pki/rhui/content-                                                                                                          rhel7.key
 Could not contact CDS load balancer rhui2-cds01.us-west-2.aws.ce.redhat.com, trying others.
-
-
 Could not contact any CDS load balancers: rhui2-cds01.us-west-2.aws.ce.redhat.com, rhui2-cds02.us-wes                                                                                                          t-2.aws.ce.redhat.com.
+
+
+[ec2-user@ip-172-31-32-200 yum.repos.d]$ sudo groupadd barca
+[ec2-user@ip-172-31-32-200 yum.repos.d]$ sudo groupadd merengues
+[ec2-user@ip-172-31-32-200 yum.repos.d]$ sudo useradd -u 2010 neymar -G barca
+[ec2-user@ip-172-31-32-200 yum.repos.d]$ sudo useradd -u 2016 ronaldo -G merengues
+[ec2-user@ip-172-31-32-200 yum.repos.d]$ cat /etc/passwd | egrep "neymar|ronaldo"
+neymar:x:2010:2010::/home/neymar:/bin/bash
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+[ec2-user@ip-172-31-32-200 yum.repos.d]$ cat /etc/group | egrep "barca|meren"
+barca:x:1001:neymar
+merengues:x:1002:ronaldo
+[ec2-user@ip-172-31-32-200 yum.repos.d]$
