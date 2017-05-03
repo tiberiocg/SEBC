@@ -2,6 +2,7 @@
 aws
 
 
+
 -List the nodes you are using by IP address and name
 hostname ip-172-31-33-209.us-west-2.compute.internal
 internal ip 172-31-33-209
@@ -22,6 +23,7 @@ external ip 34.210.34.78
 hostname ip-172-31-34-114.us-west-2.compute.internal
 internal ip 172-31-34-114
 external ip 52.27.63.232
+
 
 
 -Demonstrate the disk capacity available on each node is >= 30 GB
@@ -101,8 +103,10 @@ tmpfs           1.5G     0  1.5G   0% /run/user/1000
 tmpfs           1.5G     0  1.5G   0% /run/user/0
 
 
+
 -List the Linux release you are using
 Red Hat Enterprise Linux 7.3
+
 
 
 -List the command and output for yum repolist enabled
@@ -181,3 +185,48 @@ Could not contact CDS load balancer rhui2-cds01.us-west-2.aws.ce.redhat.com, try
 Could not contact any CDS load balancers: rhui2-cds01.us-west-2.aws.ce.redhat.com, rhui2-cds02.us-west-2.aws.ce.redhat.com.
 [ec2-user@ip-172-31-34-114 ~]$
 
+
+
+-List the /etc/passwd entries for neymar and ronaldo
+[ec2-user@ip-172-31-33-209 yum.repos.d]$ cat /etc/passwd | egrep "neymar|ronaldo"
+neymar:x:2010:2010::/home/neymar:/bin/bash
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+
+[ec2-user@ip-172-31-37-222 yum.repos.d]$ cat /etc/passwd | egrep "neymar|ronaldo"
+neymar:x:2010:2010::/home/neymar:/bin/bash
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+
+[ec2-user@ip-172-31-43-23 ~]$ cat /etc/passwd | egrep "neymar|ronaldo"
+neymar:x:2010:2010::/home/neymar:/bin/bash
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+
+[ec2-user@ip-172-31-43-220 ~]$ cat /etc/passwd | egrep "neymar|ronaldo"
+neymar:x:2010:2010::/home/neymar:/bin/bash
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+
+[ec2-user@ip-172-31-34-114 ~]$ cat /etc/passwd | egrep "neymar|ronaldo"
+neymar:x:2010:2010::/home/neymar:/bin/bash
+ronaldo:x:2016:2016::/home/ronaldo:/bin/bash
+
+
+
+-List the /etc/group entries for barca and merengues
+[ec2-user@ip-172-31-33-209 yum.repos.d]$ cat /etc/group | egrep "barca|meren"
+barca:x:1001:neymar
+merengues:x:1002:ronaldo
+
+[ec2-user@ip-172-31-37-222 yum.repos.d]$ cat /etc/group | egrep "barca|meren"
+barca:x:1001:neymar
+merengues:x:1002:ronaldo
+
+[ec2-user@ip-172-31-43-23 ~]$ cat /etc/group | egrep "barca|meren"
+barca:x:1001:neymar
+merengues:x:1002:ronaldo
+
+[ec2-user@ip-172-31-43-220 ~]$ cat /etc/group | egrep "barca|meren"
+barca:x:1001:neymar
+merengues:x:1002:ronaldo
+
+[ec2-user@ip-172-31-34-114 ~]$ cat /etc/group | egrep "barca|meren"
+barca:x:1001:neymar
+merengues:x:1002:ronaldo
