@@ -22,7 +22,7 @@ external ip 34.210.34.78
 hostname ip-172-31-34-114.us-west-2.compute.internal
 internal ip 172-31-34-114
 external ip 52.27.63.232
-------------------------------
+
 
 -Demonstrate the disk capacity available on each node is >= 30 GB
 [ec2-user@ip-172-31-33-209 yum.repos.d]$ hostname -f
