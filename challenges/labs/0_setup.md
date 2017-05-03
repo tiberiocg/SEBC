@@ -1,6 +1,6 @@
--List the cloud provider you are using (AWS, GCE, Azure, other)
+--List the cloud provider you are using (AWS, GCE, Azure, other)
 aws
------------------------------------
+
 
 -List the nodes you are using by IP address and name
 hostname ip-172-31-33-209.us-west-2.compute.internal
